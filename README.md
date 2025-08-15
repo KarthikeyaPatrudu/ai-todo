@@ -4,7 +4,7 @@
 Features an optional OpenAI API integration for smart task suggestions and prioritization.</p>
 
 <h2>🌐 Live Demo</h2>
-<p><a href="https://fascinating-douhua-17b489.netlify.app" target="_blank">Visit the App on Netlify</a></p>
+<p><a href="aitodo-app.netlify.app" target="_blank">Visit the App on Netlify</a></p>
 
 <h2>🚀 Features</h2>
 <ul>
