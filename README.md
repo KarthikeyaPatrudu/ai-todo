@@ -34,6 +34,3 @@ Features an optional OpenAI API integration for smart task suggestions and prior
 
 <h2>🔑 AI Setup</h2>
 <p>Click the <strong>⚙️</strong> icon in the app and enter your OpenAI API key to enable AI-powered task prioritization.</p>
-
-<h2>📜 License</h2>
-<p>This project is open source and available under the <a href="LICENSE">MIT License</a>.</p>
