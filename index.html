@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>AI To‑Do</title>
+  <link rel="stylesheet" href="style.css"/>
+</head>
+<body>
+  <div class="app">
+    <header>
+      <h1>AI To‑Do</h1>
+      <div class="right">
+        <button id="aiSuggest" title="Ask AI to plan your day">✨ AI Plan</button>
+        <button id="settingsBtn" title="API Key & Preferences">⚙️</button>
+      </div>
+    </header>
+
+    <section class="composer">
+      <input id="taskInput" placeholder="Add a task… e.g., 'Prepare resume for Shipsy'"/>
+      <button id="addBtn">Add</button>
+    </section>
+
+    <section class="filters">
+      <select id="filterSelect">
+        <option value="all">All</option>
+        <option value="active">Active</option>
+        <option value="completed">Completed</option>
+        <option value="today">Due Today</option>
+        <option value="high">High Priority</option>
+      </select>
+      <input id="search" placeholder="Search tasks" />
+      <button id="clearCompleted">Clear Completed</button>
+    </section>
+
+    <ul id="list"></ul>
+
+    <footer>
+      <span id="count">0 items</span>
+      <button id="exportBtn" title="Download tasks as JSON">⤓ Export</button>
+      <input type="file" id="importFile" accept="application/json" hidden/>
+      <button id="importBtn" title="Import tasks JSON">⤒ Import</button>
+    </footer>
+  </div>
+
+  <!-- Settings Modal -->
+  <dialog id="settings">
+    <form method="dialog" class="modal">
+      <h3>Settings</h3>
+      <label>OpenAI API Key
+        <input id="apiKey" type="password" placeholder="sk-... (optional)">
+      </label>
+      <label>Model
+        <input id="model" value="gpt-4o-mini">
+      </label>
+      <label><input type="checkbox" id="saveKey"> Save API key in browser (localStorage)</label>
+      <menu>
+        <button value="cancel">Close</button>
+        <button id="saveSettings" value="default">Save</button>
+      </menu>
+      <p class="muted">AI is optional. Without a key, the app works normally.</p>
+    </form>
+  </dialog>
+
+  <template id="itemTpl">
+    <li class="item">
+      <label class="check">
+        <input type="checkbox" class="toggle"/>
+        <span class="tick"></span>
+      </label>
+      <input class="title" />
+      <span class="meta"></span>
+      <div class="actions">
+        <button class="due" title="Set due date">📅</button>
+        <button class="prio" title="Toggle priority">⚑</button>
+        <button class="del" title="Delete">🗑</button>
+      </div>
+    </li>
+  </template>
+
+  <script src="app.js" type="module"></script>
+</body>
+</html>

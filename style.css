@@ -1,0 +1,34 @@
+
+:root{
+  --bg:#0b1020; --panel:#121a2b; --muted:#9fb0c3; --text:#e8eef7;
+  --accent:#6ee7ff; --accent2:#9b83ff; --border:#20314d; --high:#ff6b6b;
+}
+*{box-sizing:border-box}
+html,body{height:100%}
+body{margin:0;font-family:Inter,system-ui,Arial;background:radial-gradient(1200px 600px at 20% -10%,rgba(110,231,255,.08),transparent),radial-gradient(1000px 600px at 120% 10%,rgba(155,131,255,.12),transparent),var(--bg);color:var(--text)}
+.app{max-width:800px;margin:40px auto;padding:20px;background:rgba(18,26,43,.7);backdrop-filter: blur(8px);border:1px solid var(--border);border-radius:16px;box-shadow:0 10px 30px rgba(0,0,0,.35)}
+header{display:flex;justify-content:space-between;align-items:center;margin-bottom:14px}
+h1{font-size:1.6rem;margin:0;background:linear-gradient(90deg,var(--accent),var(--accent2));-webkit-background-clip:text;background-clip:text;color:transparent}
+header .right button{margin-left:8px}
+.composer{display:flex;gap:8px}
+.composer input{flex:1;padding:12px 14px;border-radius:10px;border:1px solid var(--border);background:#0e1526;color:var(--text)}
+button{padding:10px 12px;border-radius:10px;border:1px solid var(--border);background:#151f35;color:var(--text);cursor:pointer}
+button:hover{border-color:#334972}
+.filters{display:flex;gap:8px;margin:14px 0;flex-wrap:wrap}
+.filters input,.filters select{padding:10px 12px;border-radius:10px;border:1px solid var(--border);background:#0e1526;color:var(--text)}
+ul{list-style:none;margin:0;padding:0}
+.item{display:grid;grid-template-columns:auto 1fr auto auto;gap:10px;align-items:center;padding:10px;border:1px solid var(--border);border-radius:12px;margin-bottom:10px;background:#0e1526}
+.check{display:flex;align-items:center}
+.check input{display:none}
+.tick{width:22px;height:22px;border-radius:7px;border:1px solid var(--border);display:inline-flex;align-items:center;justify-content:center}
+.toggle:checked + .tick{background:#1e2b47;border-color:#446099}
+.title{border:none;background:transparent;color:var(--text);font-size:1rem;outline:none}
+.title.completed{text-decoration:line-through;color:var(--muted)}
+.meta{font-size:.8rem;color:var(--muted)}
+.actions{display:flex;gap:6px}
+.actions .prio.active{color:var(--high);border-color:var(--high)}
+footer{display:flex;justify-content:space-between;align-items:center;margin-top:12px;color:var(--muted)}
+dialog{border:none;border-radius:14px;max-width:520px;width:100%;background:#0f172a;color:var(--text);}
+.modal{padding:16px}
+.modal input[type=text], .modal input[type=password]{width:100%;padding:10px;border-radius:8px;border:1px solid var(--border);background:#0e1526;color:var(--text);margin-top:6px}
+.muted{color:var(--muted);font-size:.9rem}
